@@ -1,0 +1,5 @@
+b = int(input())
+a = str(input()) 
+s = list(a)
+int_list = list(map(int, s)) 
+print(sum(int_list))
