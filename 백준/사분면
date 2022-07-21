@@ -1,0 +1,27 @@
+t = int(input())
+l = []
+a = 0
+b = 0
+c = 0
+d = 0
+o = 0
+
+for i in range(t):
+  x, y = map(int, input().split())
+  if 0 < x and 0 < y:
+    a += 1
+  elif x < 0 and 0 < y:
+    b += 1
+  elif x < 0 and y < 0:
+    c += 1
+  elif 0 < x and y < 0:
+    d += 1
+  else:
+    o += 1
+l.append(a)
+l.append(b)
+l.append(c)
+l.append(d)
+for i in range(4):
+  print('Q', (i+1), ': ', l[i], sep = '')
+print('AXIS: ', o, sep = '')
