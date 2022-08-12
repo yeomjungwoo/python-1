@@ -1,0 +1,10 @@
+n, k = map(int, input().split())
+arr = [i for i in range(1, n+1)] #if n=7 -> arr[1, 2, 3, 4, 5, 6, 7]
+key = 0
+result = []
+
+while len(arr) > 0:
+    key = (key + (k-1)) % len(arr)
+    result.append(arr.pop(key))
+
+print("<%s>" % ", ".join(map(str, result)))
